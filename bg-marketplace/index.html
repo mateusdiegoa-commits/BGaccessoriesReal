@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BG Accessories · Marketplace</title>
+  <meta name="description" content="Catálogo tipo marketplace para BG Accessories. Joyas 100% Stainless Steel." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <strong>BG ACCESSORIES</strong>
+        <span>Magnífica tu Gratitud</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Categorías">
+        <a class="pill" href="#coleccion">Colección</a>
+        <a class="pill" href="#envios">Envíos</a>
+        <a class="pill" href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="actions">
+        <div class="search" title="Buscar producto">
+          🔎
+          <input data-search type="search" placeholder="Buscar aretes, collar..." />
+        </div>
+        <button class="cartbtn" data-open-cart aria-label="Abrir carrito">
+          🛒 Carrito
+          <span class="badgecount" data-cart-count>0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <div class="heroCard">
+        <div class="heroInner">
+          <div class="heroText">
+            <span class="kicker">JOYAS 100% STAINLESS STEEL</span>
+            <h1>Descubre Nuestra Colección</h1>
+            <p>
+              Cada vez que usas un accesorio BG, magnificas la gratitud por ti, por tu vida, por tus luchas
+              y por tu crecimiento constante. Nuestras joyas son más que accesorios: son recordatorios de
+              todo lo que mereces celebrar.
+            </p>
+            <div class="ctaRow">
+              <a class="btn primary" href="#coleccion">Explorar colección</a>
+              <a class="btn ghost" href="#envios">Ver envíos</a>
+            </div>
+          </div>
+          <div class="heroImg" role="img" aria-label="Imagen principal de BG Accessories"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="coleccion">
+    <div class="container">
+      <div class="sectionHead">
+        <div>
+          <h2>Marketplace</h2>
+          <p>Filtra por categoría, agrega al carrito y finaliza el pedido por WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="chips" aria-label="Filtros por categoría">
+        <button class="chip active" data-chip="Todos">Todos</button>
+        <button class="chip" data-chip="Aretes">Aretes</button>
+        <button class="chip" data-chip="Ear Cuff">Ear Cuff</button>
+        <button class="chip" data-chip="Collares">Collares</button>
+        <button class="chip" data-chip="Sets">Sets</button>
+        <button class="chip" data-chip="Pulseras">Pulseras</button>
+        <button class="chip" data-chip="Tobilleras">Tobilleras</button>
+        <button class="chip" data-chip="Anillos">Anillos</button>
+      </div>
+
+      <div style="height:16px"></div>
+
+      <div class="grid" data-grid></div>
+    </div>
+  </section>
+
+  <section class="section" id="envios">
+    <div class="container">
+      <div class="banner">
+        <div>
+          <strong>ENVÍO GRATIS</strong>
+          <p>En compras igual o mayor a <b>130.000 COP</b>. Estamos en Bogotá y enviamos a toda Colombia.</p>
+        </div>
+        <button class="btn primary" data-open-cart>Ver carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footerGrid">
+        <div>
+          <div style="font-weight:700; letter-spacing:.08em;">Be Grateful BG</div>
+          <small>Catálogo estilo marketplace · listo para personalizar con tus fotos y productos.</small>
+          <div style="height:10px"></div>
+          <div class="social">
+            <a href="https://instagram.com/accessories_bg" target="_blank" rel="noreferrer">Instagram @accessories_bg</a>
+            <a href="https://instagram.com/be_grateful_bg" target="_blank" rel="noreferrer">Instagram @be_grateful_bg</a>
+            <a href="tel:+573219068184">📞 +57 321 906 8184</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight:700;">Tips rápidos</div>
+          <small>
+            1) Reemplaza las imágenes en <code>/assets/imagenes</code>.<br/>
+            2) Edita productos en <code>/js/app.js</code>.<br/>
+            3) Publica con Netlify / GitHub Pages y comparte el link (o embébelo en Canva).
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<!-- Drawer carrito -->
+<div class="drawerBackdrop"></div>
+<aside class="drawer" aria-label="Carrito de compras">
+  <div class="drawerHead">
+    <h3>Tu carrito</h3>
+    <button class="iconBtn" data-close-cart aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="drawerBody">
+    <div data-cart-empty class="small" style="display:none;">
+      Tu carrito está vacío. Agrega productos para continuar.
+    </div>
+    <div data-cart-body></div>
+  </div>
+  <div class="drawerFoot">
+    <div class="totalRow">
+      <span>Total</span>
+      <span>$<span data-cart-total>0</span> COP</span>
+    </div>
+    <!-- Cambia el número por el tuyo (sin +, sin espacios) -->
+    <button class="whats" data-whatsapp data-phone="573219068184">Finalizar por WhatsApp</button>
+    <p class="note">Al finalizar, se abre WhatsApp con el pedido listo para enviar.</p>
+  </div>
+</aside>
+
+<script src="js/app.js"></script>
+</body>
+</html>
